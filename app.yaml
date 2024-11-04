@@ -1,5 +1,4 @@
-runtime: php74
-api_version: 1
+runtime: php83
 handlers:
 - url: /
   script: index.php
