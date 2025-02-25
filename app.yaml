@@ -1,4 +1,5 @@
-runtime: php81
+runtime: php55
+api_version: 1
 handlers:
 - url: /
   script: index.php
@@ -6,13 +7,7 @@ handlers:
 - url: /(.+\.(gif|png|jpg))$
   static_files: \1
   upload: .+\.(gif|png|jpg)$
-    #application_readable: true
+  application_readable: true
 # Serve php scripts.
 - url: /(.+\.php)$
   script: \1
-
-#upload
-- url: /(.*)
-  static_files: \1
-    #application_readable: true
-  upload: .*
